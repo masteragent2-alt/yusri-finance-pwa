@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <meta name="theme-color" content="#0b1220">
+
+  <title>Yusri Finance</title>
+
+  <link rel="manifest" href="./manifest.webmanifest">
+
+  <link
+    rel="icon"
+    type="image/png"
+    href="./Yusri_Finance_Icon_512.png">
+
+  <link
+    rel="apple-touch-icon"
+    href="./Yusri_Finance_Icon_512.png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #0b1220;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .launcher {
+      text-align: center;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 28px;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .status {
+      margin-top: 8px;
+      opacity: .65;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="launcher">
+    <img
+      class="logo"
+      src="./Yusri_Finance_Icon_512.png"
+      alt="Yusri Finance">
+
+    <div class="title">Yusri Finance</div>
+    <div class="status">Opening your finance dashboard...</div>
+  </div>
+
+  <script>
+    const FINANCE_APP =
+      'https://script.google.com/macros/s/AKfycbzFGdfpNI4PRDKdoDlB42GkO4g-rEKUE-nS8P__Ovcxlr64X5yww2Na3Q87HEl1fBj5Ow/exec';
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js')
+        .catch(console.error);
+    }
+
+    setTimeout(() => {
+      window.location.replace(FINANCE_APP);
+    }, 700);
+  </script>
+
+</body>
+</html>
