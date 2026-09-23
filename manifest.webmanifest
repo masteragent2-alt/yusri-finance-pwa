@@ -1,0 +1,17 @@
+{
+  "name": "Yusri Finance",
+  "short_name": "Yusri Finance",
+  "description": "Personal Finance by Yusri Yusof",
+  "start_url": "/yusri-finance-pwa/",
+  "display": "standalone",
+  "background_color": "#0b1220",
+  "theme_color": "#0b1220",
+  "icons": [
+    {
+      "src": "Yusri_Finance_Icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
